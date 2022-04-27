@@ -9,6 +9,8 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
 
+    path('', include('app.urls.landing_urls')),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)        
