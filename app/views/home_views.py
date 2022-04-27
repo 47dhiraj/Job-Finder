@@ -7,4 +7,13 @@ class LandingView(View):
         return render(request, 'landing/index.html')
 
 
+class ContactView(View):
+    def get(self, request):
+        return render(request, 'landing/contact.html')
+
+
+class AboutView(View):
+    def get(self, request):
+        return render(request, 'landing/about.html')
+
 
