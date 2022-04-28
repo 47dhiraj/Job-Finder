@@ -21,22 +21,22 @@
                     </div>
                     <!-- /Logo -->
 
-                    <h5 class="mb-2">Get your job with ease 🚀</h5>
+                    <h5 class="mb-2">Get deserved job with ease 🚀</h5>
                     <p class="mb-4"></p>
 
-                    <form id="register_form" class="mb-3" action="#" method="POST">
+                    <form id="register_form" class="mb-3" action="{% url 'register' %}" method="POST">
                         {% csrf_token %}
 
                         <div class="mb-3">
                             <label for="username" class="form-label">Username</label>
                             <input type="text" class="form-control" id="username" name="username"
-                                placeholder="Enter your name" value="{{data.username}}" autofocus />
+                                placeholder="Enter your name" value="{{data.username}}" required autofocus />
                         </div>
 
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" name="email" value="{{data.email}}"
-                                placeholder="Enter your email" />
+                                placeholder="Enter your email" required />
                         </div>
 
                         <div class="mb-3 form-password-toggle">
@@ -45,7 +45,7 @@
 
                                 <input type="password" id="password" class="form-control" name="password"
                                     placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                                    aria-describedby="password" />
+                                    aria-describedby="password" required />
 
                                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
 
@@ -58,7 +58,7 @@
 
                                 <input type="password" id="password2" class="form-control" name="password2"
                                     placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                                    aria-describedby="password2" />
+                                    aria-describedby="password2" required />
 
                                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
 
@@ -90,7 +90,7 @@
 
                     <p class="text-center">
                         <span>Already have an account ? </span>
-                        <a href="auth-login-basic.html">
+                        <a href="{% url 'login' %}">
                             <span>Sign In </span>
                         </a>
                     </p>

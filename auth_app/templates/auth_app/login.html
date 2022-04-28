@@ -25,15 +25,15 @@
                     </div>
                     <!-- /Logo -->
 
-                    <h5 class="mb-2">Welcome to Job Finder! 👋</h5>
+                    <h5 class="mb-2">Welcome to Job Finder ! 👋</h5>
 
 
-                    <form id="login_form" class="mb-3" action="#" method="POST">
+                    <form id="login_form" class="mb-3" action="{% url 'login' %}" method="POST">
 
-                        <div class="mb-3">
+                        <div class="mb-3 mt-4">
                             <label for="email" class="form-label">Email Address</label>
                             <input type="email" class="form-control" id="email" name="email"
-                                placeholder="Enter your email address" autofocus />
+                                placeholder="Enter your email address" required autofocus />
                         </div>
 
                         <div class="mb-3 form-password-toggle">
@@ -48,7 +48,7 @@
                             <div class="input-group input-group-merge">
                                 <input type="password" id="password" class="form-control" name="password"
                                     placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                                    aria-describedby="password" />
+                                    aria-describedby="password" required />
                                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                             </div>
 
@@ -75,12 +75,30 @@
                             <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
                         </div>
 
+
+                        <div class="text-center">
+
+                            <div style="border-bottom: 1px solid black; margin-left: 24%;" class="w-50 mb-3 mt-3">
+                                <span>
+                                    or Login With
+                                </span>
+                            </div>
+
+                            <a href="#" class="pe-3">
+                                <img src="{% static 'dashboard/images/fb.png' %}" width="40">
+                            </a>
+
+                            <a href="#">
+                                <img src="{% static 'dashboard/images/gp.png' %}" width="40">
+                            </a>
+                        </div>
+
                     </form>
 
 
                     <p class="text-center">
                         <span>New on our platform ?</span>
-                        <a href="#">
+                        <a href="{% url 'register' %}">
                             <span>Sign Up</span>
                         </a>
                     </p>
