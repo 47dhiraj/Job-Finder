@@ -17,3 +17,7 @@ class AboutView(View):
         return render(request, 'landing/about.html')
 
 
+class HomeView(View):
+    def get(self, request):
+        return render(request, 'app/index.html')
+

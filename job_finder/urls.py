@@ -11,6 +11,8 @@ urlpatterns = [
 
     path('', include('app.urls.landing_urls')),
 
+    path('', include('app.urls.app_urls')),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)        
