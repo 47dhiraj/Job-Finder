@@ -29,7 +29,8 @@
 
 
                     <form id="login_form" class="mb-3" action="{% url 'login' %}" method="POST">
-
+                        {% csrf_token %}
+                        
                         <div class="mb-3 mt-4">
                             <label for="email" class="form-label">Email Address</label>
                             <input type="email" class="form-control" id="email" name="email"
@@ -40,7 +41,7 @@
 
                             <div class="d-flex justify-content-between">
                                 <label class="form-label" for="password">Password</label>
-                                <a href="auth-forgot-password-basic.html">
+                                <a href="{% url 'reset_email' %}">
                                     <small>Forgot Password?</small>
                                 </a>
                             </div>
@@ -84,11 +85,11 @@
                                 </span>
                             </div>
 
-                            <a href="#" class="pe-3">
+                            <a href="{% provider_login_url "facebook" method="oauth2" %}" class="pe-3">
                                 <img src="{% static 'dashboard/images/fb.png' %}" width="40">
                             </a>
 
-                            <a href="#">
+                            <a href="{% provider_login_url "google" %}">
                                 <img src="{% static 'dashboard/images/gp.png' %}" width="40">
                             </a>
                         </div>

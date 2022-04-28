@@ -9,6 +9,51 @@
 
 {% block body %}
 
+<!-- Content -->
+<div class="container-xxl">
+    <div class="authentication-wrapper authentication-basic container-p-y">
+        <div class="authentication-inner py-4">
 
+            <!-- Forgot Password -->
+            <div class="card">
+                <div class="card-body">
+
+                    <!-- Logo -->
+                    <div class="app-brand justify-content-center">
+                        <span class="app-brand-text demo text-body fw-bolder">Reset Password</span>
+                    </div>
+                    <!-- /Logo -->
+
+
+                    <h5 class="mb-4">Forgot Password ? 🔒</h5>
+                    
+                    <form id="request_email_form" class="mb-3" action="{% url 'reset_email' %}" method="POST">
+                        {% csrf_token %}
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="text" class="form-control" id="email" name="email"
+                                placeholder="Enter your email" required autofocus />
+                        </div>
+                        <button class="btn btn-primary d-grid w-100">Send Reset Link</button>
+                    </form>
+
+                    <div class="text-center">
+                        <a href="{% url 'login' %}" class="d-flex align-items-center justify-content-center">
+                            <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
+                            Back to login
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /Forgot Password -->
+
+
+        </div>
+    </div>
+</div>
+
+<!-- / Content -->
 
 {% endblock %}

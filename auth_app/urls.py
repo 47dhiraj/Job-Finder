@@ -13,5 +13,12 @@ urlpatterns = [
     
     path('activate/<slug:uidb64>/<slug:token>/', views.ActivateAccountView.as_view(), name='activate'),
 
+    path('request_reset_email/', views.RequestResetEmailView.as_view(), name='reset_email'),
+
+    path('set_new_password/<slug:uidb64>/<slug:token>/', views.SetNewPasswordView.as_view(), name='set_new_password'),
+
+    path('accounts/', include('allauth.urls')),
     
 ]
+
+
