@@ -1,0 +1,43 @@
+{% extends 'auth_app/auth_base.html' %}
+
+
+{% block styles %}
+{% endblock %}
+
+
+{% block body %}
+
+<div class="modal fade" id="failedModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">Account Confirmation Failed</h4>
+            </div>
+
+            <div class="modal-body">
+                <h6>The confirmation link was invalid, possibly because it has already been used.</h6>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>  
+
+
+
+
+<script type="text/javascript">
+    window.onload = () => {
+        $('#failedModal').modal('show');
+    }
+</script>
+
+{% endblock %}
