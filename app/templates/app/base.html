@@ -186,24 +186,25 @@
                     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
 
                         <!-- Search -->
-                        <div class="navbar-nav align-items-center p-4">
-                            <div class="nav-item d-flex align-items-center">
-                                <i class="bx bx-search fs-4 lh-0"></i>
-                                <input type="text" class="rounded-pill form-control border-1 shadow"
-                                    placeholder="Search..." aria-label="Search ... ">
-                            </div>
+                        <div class="navbar-nav align-items-center ps-5">
+
+                            <form class="d-flex" id="search_form">
+
+                                <div class="input-group">
+                                    <span class="input-group-text rounded-circle text-primary">
+                                        <i class="bx bx-search fs-0">
+                                        </i>
+                                    </span>
+                                    
+                                    <input type="text" name="search" id="search" class="rounded-pill form-control border-2 shadow ms-2" placeholder=" Search  ... " aria-label="search" style="text-indent: 20px;">
+                                </div>
+                            </form>
+
                         </div>
                         <!-- /Search -->
 
 
-                        <ul class="navbar-nav flex-row align-items-center ms-auto">
-                            <!-- Place this tag where you want the button to render. -->
-                            <li class="nav-item lh-1 me-3">
-                                <a class="github-button"
-                                    href="https://github.com/themeselection/sneat-html-admin-template-free"
-                                    data-icon="octicon-star" data-size="large" data-show-count="true"
-                                    aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">Star</a>
-                            </li>
+                        <ul class="navbar-nav flex-row align-items-center ms-auto pe-3">
 
                             <!-- User -->
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
@@ -269,6 +270,7 @@
                             </li>
                             <!--/ User -->
                         </ul>
+
                     </div>
 
                 </nav>
