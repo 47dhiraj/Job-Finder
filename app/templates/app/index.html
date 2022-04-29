@@ -6,10 +6,6 @@
 
 {% block styles %}
 
-<style>
-
-</style>
-
 {% endblock %}
 
 
@@ -22,8 +18,58 @@
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
 
+        <h4 class="fw-bold py-3 mb-4 text-secondary">Dashboard / <a href="#" class="text-primary"> Home</a></h4>
+
+
         <div class="row">
 
+            <div class="col-md-2 mb-5">
+            </div>
+
+            <div class="col-md-2 mb-5">
+                <div class="mb-1">
+                    <select id="defaultSelect" class="form-select form-select-lg text-center">
+                        <option> Job Type </option>
+                        <option value="Fulltime">Fulltime</option>
+                        <option value="Parttime">Parttime</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-2 mb-5">
+                <div class="mb-1">
+                    <select id="defaultSelect" class="form-select form-select-lg text-center">
+                        <option> Job Roles </option>
+                        <option value="Developer">Developer</option>
+                        <option value="Designer">Designer</option>
+                        <option value="Team-Lead">Team-Lead</option>
+                        <option value="Project-Manager">Project-Manager</option>
+                        <option value="Quality-Assurance">Quality-Assurance</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-2 mb-5">
+                <div class="mb-1">
+                    <select id="defaultSelect" class="form-select form-select-lg text-center">
+                        <option> Job Locations </option>
+                        <option value="Onsite">Onsite</option>
+                        <option value="Remote">Remote</option>
+                        <option value="Freelance">Freelance</option>
+                        <option value="Hybrid">Hybrid</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-2 mb-5">
+                <a class="btn btn-lg" style="background-color: #03cc67; color: white;" href=""><span class="fw-bold">Find Jobs</span></a>
+            </div>
+
+        </div>
+
+
+        <!-- Job Lists -->
+        <div class="row">
             <div class="col-xl-12">
                 <div class="nav-align-top mb-4">
 
@@ -70,12 +116,13 @@
                                                 <i class="bx bx-heart text-primary"></i>
                                             </a>
 
-                                            <a class="btn btn-primary" href="">Apply Now</a>
+                                            <a class="btn btn-primary" href="">View Job</a>
 
                                         </div>
                                         <small class="text-truncate">
                                             <i class="bx bx-calendar text-primary me-2"></i>
-                                            Date Line: 01 Jan, 2045</small>
+                                            Date Line: 01 Jan, 2045
+                                        </small>
                                     </div>
 
                                 </div>
@@ -119,12 +166,13 @@
                                                 <i class="bx bx-heart text-primary"></i>
                                             </a>
 
-                                            <a class="btn btn-primary" href="">Apply Now</a>
+                                            <a class="btn btn-primary" href="">View Job</a>
 
                                         </div>
                                         <small class="text-truncate">
                                             <i class="bx bx-calendar text-primary me-2"></i>
-                                            Date Line: 01 Jan, 2045</small>
+                                            Date Line: 01 Jan, 2045
+                                        </small>
                                     </div>
 
                                 </div>
@@ -168,12 +216,13 @@
                                                 <i class="bx bx-heart text-primary"></i>
                                             </a>
 
-                                            <a class="btn btn-primary" href="">Apply Now</a>
+                                            <a class="btn btn-primary" href="">View Job</a>
 
                                         </div>
                                         <small class="text-truncate">
                                             <i class="bx bx-calendar text-primary me-2"></i>
-                                            Date Line: 01 Jan, 2045</small>
+                                            Date Line: 01 Jan, 2045
+                                        </small>
                                     </div>
 
                                 </div>
@@ -217,12 +266,13 @@
                                                 <i class="bx bx-heart text-primary"></i>
                                             </a>
 
-                                            <a class="btn btn-primary" href="">Apply Now</a>
+                                            <a class="btn btn-primary" href="">View Job</a>
 
                                         </div>
                                         <small class="text-truncate">
                                             <i class="bx bx-calendar text-primary me-2"></i>
-                                            Date Line: 01 Jan, 2045</small>
+                                            Date Line: 01 Jan, 2045
+                                        </small>
                                     </div>
 
                                 </div>
@@ -234,7 +284,7 @@
                             <div class="row pagination-wrap mt-5">
 
                                 <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
-                                    <span class="pagination justify-content-around">Showing 1-7 Of 500 Jobs</span>
+                                    <span class="pagination justify-content-around">Showing 1-10 Of 100 Jobs</span>
                                 </div>
 
                                 <div class="col-md-6 text-center text-md-right">
@@ -284,8 +334,8 @@
 
                 </div>
             </div>
-
         </div>
+        <!-- Job Lists -->
 
     </div>
     <!-- / Content -->
